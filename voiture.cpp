@@ -1,7 +1,7 @@
 #include "voiture.h"
 #include <iostream>
 
-CVoiture::CVoiture(std::string p_marque, stdstring p_modele, int p_puissance, std::string p_carburant) {
+CVoiture::CVoiture(std::string p_marque, std::string p_modele, int p_puissance, std::string p_carburant) {
     marque = p_marque;
     modele = p_modele;
     puissance = p_puissance;
@@ -13,7 +13,7 @@ void CVoiture::demarrer ()  {
     std::cout << "La voiture demarre. " << std::endl;
 }
 
-void CVoiure::accelerer(int valeur) {
+void CVoiture::accelerer(int valeur) {
     vitesse += valeur;
 }
 
@@ -28,4 +28,9 @@ void CVoiture::arreter() {
 }
 
 void CVoiture::afficher() {
-    std::cout << "Voiture: " << marque << " " << modele << " | Puissance: << puissance << " ch | Carburant: " << carburant << " | Vitesse: " << vitesse << " km/h" << std::endl;
+    std::cout << "Voiture: " << marque << " " << modele 
+              << " | Puissance: " << puissance << " ch"
+	      << " | Carburant: " << carburant
+              << " | Vitesse; " << vitesse << " km/h" << std::endl;
+}
+
